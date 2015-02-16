@@ -1,0 +1,24 @@
+<h1>People</h1>
+<p>
+    <a href="#/add" class="btn btn-primary btn-lg">Add Person</a>
+</p>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>Id</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="person in people">
+            <td><button type="button" class="btn btn-default" ng-click="details(person.id)">Details</button></td>
+            <td><a href="#/update:{{person.id}}" class="btn btn-info">Update</a></td>
+            <td>{{person.id}}</td>
+            <td>{{person.firstName}}</td>
+            <td>{{person.lastName}}</td>
+        </tr>
+    </tbody>            
+</table>
